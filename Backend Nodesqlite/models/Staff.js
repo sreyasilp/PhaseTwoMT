@@ -7,7 +7,7 @@ const Staff = db.define("staffapp", {
     primaryKey: true,
     autoIncrement: true,
   },
-  email: {
+  customer_name: {
     type: Sequelize.STRING,
     allowNull: false,
   },

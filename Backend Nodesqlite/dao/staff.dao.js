@@ -26,7 +26,7 @@ function create(staff) {
 
 function updateStaff(staff, id) {
   var updateStaff = {
-    email: staff.email,
+    customer_name: staff.customer_name,
     password: staff.password,
     first_name: staff.first_name,
     last_name: staff.last_name,

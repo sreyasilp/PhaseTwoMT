@@ -11,7 +11,7 @@ import { useState, useEffect } from "react";
 // }
 
 function DeleteVisit() {
-  const [staff, setStaff] = useState([]);
+  const [staff, setVisit] = useState([]);
   const { id } = useParams();
 
   useEffect(() => {
@@ -22,7 +22,7 @@ function DeleteVisit() {
       console.log(response);
       //response object contains the complete HTTP REQUEST with
       //returned data, status code, and headers. We need only 'data'
-      setStaff(response.data);
+      setVisit(response.data);
     });
     window.location = "/staffList";
   }, []);

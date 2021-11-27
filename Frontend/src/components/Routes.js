@@ -10,10 +10,10 @@ import AddVisit from "./Pages/AddVisit";
 import Nomatch from "./Pages/No Match";
 import VisitList from "./Pages/VisitList";
 import VisitDetails from "./Pages/VisitDetails";
-// import StaffEdit from "./Pages/Staff Edit";
 import DeleteStaff from "./Pages/VisitDelete";
-import UserEdit from "./Pages/UpdateRegistration";
 import VisitEdit from "./Pages/VisitUpdate";
+// import UserEdit from "./Pages/UpdateRegistration";
+// import StaffEdit from "./Pages/Staff Edit";
 
 function Routers() {
   return (
@@ -60,8 +60,8 @@ function Routers() {
         )}
 
         {localStorage.getItem("mytoken") && (
-          <Link className="btn btn-primary mb-2 ms-2" to="/stafflist">
-            Staff List
+          <Link className="btn btn-primary mb-2 ms-2" to="/visitlist">
+            Visit List
           </Link>
         )}
         {/* 
@@ -88,7 +88,7 @@ function Routers() {
         <Route path="/userregistration" element={<UserRegistration />} />
         <Route path="/addvisit" element={<AddVisit />} />
         {/* <Route path="/regedit" element={<UserEdit />} /> */}
-        <Route path="/stafflist" element={<VisitList />} />
+        <Route path="/visitlist" element={<VisitList />} />
         <Route path="/staffdetails/:id" element={<VisitDetails />} />
         <Route path="/visitedit/:id" element={<VisitEdit />} />
         <Route path="/visitdelete/:id" element={<DeleteStaff />} />

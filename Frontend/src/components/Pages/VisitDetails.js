@@ -5,7 +5,7 @@ import axios from "axios";
 
 function VisitDetails() {
   //initialize the use case to empty
-  const [staff, setStaff] = useState([]);
+  const [staff, setVisit] = useState([]);
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -13,7 +13,7 @@ function VisitDetails() {
     axios.get(`http://localhost:3001/staff/${id}`).then((response) => {
       console.log("promise was fullfilled");
       console.log(response);
-      setStaff(response.data);
+      setVisit(response.data);
     });
   }, []);
 
@@ -39,7 +39,7 @@ function VisitDetails() {
           Delete Staff
         </button>
 
-        <a href="/stafflist">Back to Staff List</a>
+        <a href="/visitlist">Back to Visit List</a>
       </div>
     </>
   );

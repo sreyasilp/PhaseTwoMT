@@ -32,22 +32,22 @@ function AddVisit() {
 
   return (
     <div class="container-fluid col-md-11">
-      <h2 class="h3 text-black text-center bg-warning">Visits Table</h2>
+      <h2 class="h3 text-black text-center bg-warning">Add Visit</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label> Enter your Email :</label>
+          <label> Customer Name :</label>
           <input
-            type="email"
+            type="text"
             class="form-control"
-            name="email"
-            value={inputs.email || ""}
+            name="customer_name"
+            value={inputs.customer_name || ""}
             onChange={handleChange}
             required
           />
         </div>
 
         <div>
-          <label> Enter your Password :</label>
+          <label> Contact Person :</label>
           <input
             class="form-control"
             type="password"
