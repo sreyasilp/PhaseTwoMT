@@ -25,16 +25,14 @@ function Login() {
     axios
       .post("http://localhost:3002/login", inputs)
       .then((response) => {
-     
-
-        if (inputs.role === response.data.user.role) {
-          localStorage.setItem("mytoken", response.data.accessToken);
-          window.location = "/staff-list";
-          return;
-        } else {
-          alert("Invalid role");
-          window.location = "/login";
-        }
+        // if (inputs.role === response.data.users.role) {
+        localStorage.setItem("mytoken", response.data.accessToken);
+        //   window.location = "/staff-list";
+        //   return;
+        // } else {
+        //   alert("Invalid role");
+        //   window.location = "/login";
+        // }
 
         window.location = "/";
         console.log("coorect");
@@ -76,14 +74,19 @@ function Login() {
         </div>
 
         <div>
-          <label> Enter your Role :</label>
-          <input
-            type="text"
-            class="form-control"
+          <label for="role">Choose a Role:</label>
+
+          <select
             name="role"
+            class="form-control"
+            id="cars"
             value={inputs.role || ""}
             onChange={handleChange}
-          />
+            required
+          >
+            <option value="Admin">Admin</option>
+            <option value="Sales Executive">Sales Executive</option>
+          </select>
         </div>
 
         <div>

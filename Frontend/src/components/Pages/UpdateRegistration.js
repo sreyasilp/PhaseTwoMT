@@ -14,10 +14,12 @@ function UserEdit() {
 function MyForm(props) {
   const [inputs, setInputs] = useState({});
   useEffect(() => {
-    axios.get(`http://localhost:3001/staff/${props.id}`).then((response) => {
-      console.log(response);
-      setInputs(response.data);
-    });
+    axios
+      .get(`http://localhost:3002/userregistration/${props.id}`)
+      .then((response) => {
+        console.log(response);
+        setInputs(response.data);
+      });
   }, []);
 
   function handleChange(event) {
@@ -29,7 +31,7 @@ function MyForm(props) {
     event.preventDefault();
     console.log(inputs);
     axios
-      .put(`http://localhost:3001/staff/${props.id}`, inputs)
+      .put(`http://localhost:3002/userregistration/${props.id}`, inputs)
       .then((response) => {
         console.log(response);
         alert("User Details were updated!");
@@ -38,17 +40,29 @@ function MyForm(props) {
   return (
     <div class="container-fluid col-md-11">
       <h2 class="h3 text-black text-center bg-warning">
-        Update Registration Form
+        User Registration Form
       </h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label> Enter your User Name :</label>
+          <label> First Name :</label>
           <input
             type="text"
             class="form-control"
             name="first_name"
             value={inputs.first_name || ""}
             onChange={handleChange}
+          />
+        </div>
+
+        <div>
+          <label> Last Name :</label>
+          <input
+            type="text"
+            class="form-control"
+            name="last_name"
+            value={inputs.last_name || ""}
+            onChange={handleChange}
+            required
           />
         </div>
 
@@ -63,7 +77,7 @@ function MyForm(props) {
             required
           />
         </div>
-        {/* 
+
         <div>
           <label> Enter your Password :</label>
           <input
@@ -74,30 +88,79 @@ function MyForm(props) {
             onChange={handleChange}
             required
           />
-        </div> */}
+        </div>
 
         <div>
-          <label> Enter User Type:</label>
+          <label> Enter Your Age:</label>
+          <input
+            type="number"
+            class="form-control"
+            name="age"
+            value={inputs.age || ""}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <label> Enter your Gender :</label>
           <input
             type="text"
             class="form-control"
-            name="last_name"
-            value={inputs.last_name || ""}
+            name="gender"
+            value={inputs.gender || ""}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <label> Enter your Address :</label>
+          <input
+            type="text"
+            class="form-control"
+            name="address"
+            value={inputs.address || ""}
             onChange={handleChange}
             required
           />
         </div>
 
         <div>
-          <label> Enter User Type:</label>
+          <label> Enter your Phone Number :</label>
           <input
-            type="text"
+            type="tel"
             class="form-control"
-            name="last_name"
-            value={inputs.last_name || ""}
+            name="phone"
+            value={inputs.phone || ""}
             onChange={handleChange}
             required
           />
+        </div>
+        {/* <div>
+        <label> Enter User Role:</label>
+        <input
+          type="text"
+          class="form-control"
+          name="role"
+          value={inputs.role || ""}
+          onChange={handleChange}
+          required
+        />
+      </div> */}
+
+        <div>
+          <label for="role">Choose a Role:</label>
+
+          <select
+            name="role"
+            class="form-control"
+            id="cars"
+            value={inputs.role || ""}
+            onChange={handleChange}
+            required
+          >
+            <option value="Admin">Admin</option>
+            <option value="Sales Executive">Sales Executive</option>
+          </select>
         </div>
 
         <div>

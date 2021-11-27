@@ -26,14 +26,14 @@ function UserRegistration() {
     axios.post("http://localhost:3002/register", inputs).then((response) => {
       console.log("promise was fullfilled");
       console.log(response);
-      window.location = "/regedit";
+      window.location = "/stafflogin";
     });
   }
 
   return (
     <div class="container-fluid col-md-11">
       <h2 class="h3 text-black text-center bg-warning">
-        Office Staff Registration Form
+        User Registration Form
       </h2>
       <form onSubmit={handleSubmit}>
         <div>
@@ -128,7 +128,7 @@ function UserRegistration() {
             required
           />
         </div>
-        <div>
+        {/* <div>
           <label> Enter User Role:</label>
           <input
             type="text"
@@ -138,23 +138,21 @@ function UserRegistration() {
             onChange={handleChange}
             required
           />
-        </div>
+        </div> */}
 
         <div>
-          <label for="roles">Choose a Role:</label>
+          <label for="role">Choose a Role:</label>
 
           <select
-            name="roles"
+            name="role"
             class="form-control"
             id="cars"
-            value={inputs.roles || ""}
+            value={inputs.role || ""}
             onChange={handleChange}
             required
           >
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="mercedes">Mercedes</option>
-            <option value="audi">Audi</option>
+            <option value="Admin">Admin</option>
+            <option value="Sales Executive">Sales Executive</option>
           </select>
         </div>
 

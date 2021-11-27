@@ -70,6 +70,53 @@
       "role": "admin",
       "roles": "saab",
       "id": 7
+    },
+    {
+      "email": "manu@gmail.com",
+      "password": "$2a$10$f6ObefHGVMneHqHIekMrLe/wAZwnRy2dIStvJyU9byGqvBRXe9uli",
+      "first_name": "Manu",
+      "last_name": "RT",
+      "age": "23",
+      "gender": "male",
+      "address": "Palakkad",
+      "phone": "7403563999",
+      "role": "admin",
+      "roles": "saab",
+      "id": 8
+    },
+    {
+      "email": "noel@gmail.com",
+      "password": "$2a$10$.ywcKNvhaKG3Jl3CH9tevOkmhGjQhxyZgBShMXDVwafU1z1gwJhRm",
+      "first_name": "Noel",
+      "last_name": "P S",
+      "age": "15",
+      "gender": "Male",
+      "address": "Palakkad",
+      "phone": "9746789988",
+      "role": "Sales Executive",
+      "id": 9
+    },
+    {
+      "email": "name6@gmail.com",
+      "password": "$2a$10$GnbNImqFBOnR21EI5RPx8.EltQsXLZnrRNLGZdkxKsl3TkjyxdlJW",
+      "first_name": "name6",
+      "last_name": "lastname7",
+      "age": "22",
+      "gender": "Male",
+      "address": "Kochi",
+      "phone": "987654321",
+      "id": 10
+    },
+    {
+      "email": "rahul@gmail.com",
+      "password": "$2a$10$YIdPfjgmZCbWnE47uz1sd..HATu2TJTihCvAp8rOmsFVJtZ.Rxn1u",
+      "first_name": "rahul",
+      "last_name": "cr",
+      "age": "11",
+      "gender": "male",
+      "address": "Thrissur",
+      "phone": "987654321",
+      "id": 11
     }
   ]
 }
