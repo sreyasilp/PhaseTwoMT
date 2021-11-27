@@ -1,0 +1,62 @@
+{
+  "users": [
+    {
+      "email": "sreyas@gmail.com",
+      "password": "$2a$10$wYrSAuNPfTgDe1UnrITcleXqrVS0KTq/pLjHDD5TCSNfWTCeoI.TC",
+      "username": "sreyas123",
+      "usertype": "admin",
+      "id": 1
+    },
+    {
+      "email": "testuser1@gmail.com",
+      "password": "$2a$10$aTEt.EfeeBmTgt4QRSoGweH6DitEszEugorRx3aHyUh2h2dklAh3S",
+      "first_name": "TestFirstName1",
+      "last_name": "Admin",
+      "id": 2
+    },
+    {
+      "email": "user2@g.com",
+      "password": "$2a$10$f29eLD3ec5HgOV9bEV9Dgurg1tkyQoHOcST.3Z7pwNoT54SeiwNFO",
+      "first_name": "user2",
+      "last_name": "Manager",
+      "id": 3
+    },
+    {
+      "email": "sreyastp444@gmail.com",
+      "password": "$2a$10$KpZCcAusc15Lgghb3kwL4ewg2WV8JiPENRFH61SZR8vP9XFpCMAc2",
+      "first_name": "Sreyas",
+      "last_name": "T P",
+      "age": "22",
+      "gender": "male",
+      "address": "Palakkad",
+      "phone": "7403563990",
+      "role": "Admin",
+      "id": 4
+    },
+    {
+      "email": "sreyastp444@gmail.com",
+      "password": "$2a$10$u9WYML03eah2DZe9sW8gKu.V6dTPNxarWJ23cuJVDVhrwIpUosd2m",
+      "first_name": "Sreyas",
+      "last_name": "T P",
+      "age": "22",
+      "gender": "male",
+      "address": "Palakkad",
+      "phone": "7403563990",
+      "role": "Admin",
+      "id": 5
+    },
+    {
+      "email": "arun@gmail.com",
+      "password": "$2a$10$A6KPMB716bI7GyJFEKFPbe8Q6SS8WOWLYqfu6WyEOCHsrHIY2FPXS",
+      "first_name": "Arun",
+      "roles": "audi",
+      "last_name": "p r",
+      "age": "23",
+      "gender": "male",
+      "address": "Thrissur",
+      "phone": "7403563990",
+      "role": "admin",
+      "id": 6
+    }
+  ]
+}

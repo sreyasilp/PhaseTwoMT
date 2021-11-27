@@ -1,0 +1,9 @@
+{
+    "login":[
+        {
+            "error":"InvalidTokenHeader",
+            "message":"failed to decode JWT token --InvalidSignatureError:Signature verification failed",
+            "status_code":401
+        }
+    ]
+}
