@@ -6,7 +6,7 @@ import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Login from "./Pages/Login";
 import UserRegistration from "./Pages/UserRegistration";
-// import Register from "./Pages/Registration";
+import Register from "./Pages/Registration";
 import Nomatch from "./Pages/No Match";
 import StaffList from "./Pages/Stafflist";
 import StaffDetails from "./Pages/Staff Details";
@@ -32,10 +32,10 @@ function Routers() {
         <Link className="btn btn-primary mb-2 ms-2" to="/contact">
           Contact Us
         </Link>
-        {/* 
-        <Link className="btn btn-primary mb-2 ms-2" to="/userregistration">
-          User Registration
-        </Link> */}
+
+        <Link className="btn btn-primary mb-2 ms-2" to="/staffreg">
+          Visits Reg
+        </Link>
 
         {localStorage.getItem("mytoken") && (
           <Link className="btn btn-primary mb-2 ms-2" to="/userregistration">
@@ -85,7 +85,7 @@ function Routers() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/stafflogin" element={<Login />} />
         <Route path="/userregistration" element={<UserRegistration />} />
-        {/* <Route path="/staffreg" element={<Register />} /> */}
+        <Route path="/staffreg" element={<Register />} />
         {/* <Route path="/regedit" element={<UserEdit />} /> */}
         <Route path="/stafflist" element={<StaffList />} />
         <Route path="/staffdetails/:id" element={<StaffDetails />} />

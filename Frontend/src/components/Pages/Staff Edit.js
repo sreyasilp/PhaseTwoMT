@@ -14,7 +14,7 @@ function StaffEdit() {
 function MyForm(props) {
   const [inputs, setInputs] = useState({});
   useEffect(() => {
-    axios.get(`http://localhost:3001/staff/${props.id}`).then((response) => {
+    axios.get(`http://localhost:4000/staff/${props.id}`).then((response) => {
       console.log(response);
       setInputs(response.data);
     });

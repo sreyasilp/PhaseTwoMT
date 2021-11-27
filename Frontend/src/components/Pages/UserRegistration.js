@@ -151,7 +151,8 @@ function UserRegistration() {
             onChange={handleChange}
             required
           >
-            <option value="Admin">Admin</option>
+            <option value="">--choose --</option>
+            <option value="Sales Co-ordinator">Sales Co-ordinator</option>
             <option value="Sales Executive">Sales Executive</option>
           </select>
         </div>
