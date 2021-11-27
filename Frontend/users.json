@@ -57,6 +57,19 @@
       "phone": "7403563990",
       "role": "admin",
       "id": 6
+    },
+    {
+      "email": "Danny@gmail.com",
+      "password": "$2a$10$8f/S0aHEjDwIAxKu9aJ1WuJDSyLkooQep7IeOJEqouOMG8mowHA7K",
+      "first_name": "Danny",
+      "last_name": "Das",
+      "age": "23",
+      "gender": "male",
+      "address": "Thrissur",
+      "phone": "7403563990",
+      "role": "admin",
+      "roles": "saab",
+      "id": 7
     }
   ]
 }
