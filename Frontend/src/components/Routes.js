@@ -8,10 +8,10 @@ import Login from "./Pages/Login";
 import UserRegistration from "./Pages/UserRegistration";
 import Register from "./Pages/Registration";
 import Nomatch from "./Pages/No Match";
-import StaffList from "./Pages/Stafflist";
-import StaffDetails from "./Pages/Staff Details";
+import StaffList from "./Pages/VisitList";
+import StaffDetails from "./Pages/VisitDetails";
 // import StaffEdit from "./Pages/Staff Edit";
-import DeleteStaff from "./Pages/Staffdelete";
+import DeleteStaff from "./Pages/VisitDelete";
 import UserEdit from "./Pages/UpdateRegistration";
 
 function Routers() {
