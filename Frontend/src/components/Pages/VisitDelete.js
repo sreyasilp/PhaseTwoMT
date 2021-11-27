@@ -10,7 +10,7 @@ import { useState, useEffect } from "react";
 //     .catch((error) => console.log(error));
 // }
 
-function DeleteStaff() {
+function DeleteVisit() {
   const [staff, setStaff] = useState([]);
   const { id } = useParams();
 
@@ -41,4 +41,4 @@ function DeleteStaff() {
     </>
   );
 }
-export default DeleteStaff;
+export default DeleteVisit;

@@ -8,7 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
   crossorigin="anonymous"
 />;
 
-function Register() {
+function AddVisit() {
   const [inputs, setInputs] = useState({});
 
   function handleChange(event) {
@@ -131,4 +131,4 @@ function Register() {
   );
 }
 
-export default Register;
+export default AddVisit;

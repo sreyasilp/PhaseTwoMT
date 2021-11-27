@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
-function StaffEdit() {
+function VisitEdit() {
   const { id } = useParams();
   return (
     <>
@@ -117,4 +117,4 @@ function MyForm(props) {
   );
 }
 
-export default StaffEdit;
+export default VisitEdit;

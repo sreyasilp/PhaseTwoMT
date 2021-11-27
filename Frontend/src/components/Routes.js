@@ -6,13 +6,14 @@ import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Login from "./Pages/Login";
 import UserRegistration from "./Pages/UserRegistration";
-import Register from "./Pages/Registration";
+import AddVisit from "./Pages/AddVisit";
 import Nomatch from "./Pages/No Match";
-import StaffList from "./Pages/VisitList";
-import StaffDetails from "./Pages/VisitDetails";
+import VisitList from "./Pages/VisitList";
+import VisitDetails from "./Pages/VisitDetails";
 // import StaffEdit from "./Pages/Staff Edit";
 import DeleteStaff from "./Pages/VisitDelete";
 import UserEdit from "./Pages/UpdateRegistration";
+import VisitEdit from "./Pages/VisitUpdate";
 
 function Routers() {
   return (
@@ -33,8 +34,8 @@ function Routers() {
           Contact Us
         </Link>
 
-        <Link className="btn btn-primary mb-2 ms-2" to="/staffreg">
-          Visits Reg
+        <Link className="btn btn-primary mb-2 ms-2" to="/addvisit">
+          Add Visits
         </Link>
 
         {localStorage.getItem("mytoken") && (
@@ -85,12 +86,12 @@ function Routers() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/stafflogin" element={<Login />} />
         <Route path="/userregistration" element={<UserRegistration />} />
-        <Route path="/staffreg" element={<Register />} />
+        <Route path="/addvisit" element={<AddVisit />} />
         {/* <Route path="/regedit" element={<UserEdit />} /> */}
-        <Route path="/stafflist" element={<StaffList />} />
-        <Route path="/staffdetails/:id" element={<StaffDetails />} />
-        <Route path="/useredit/:id" element={<UserEdit />} />
-        <Route path="/staffdelete/:id" element={<DeleteStaff />} />
+        <Route path="/stafflist" element={<VisitList />} />
+        <Route path="/staffdetails/:id" element={<VisitDetails />} />
+        <Route path="/visitedit/:id" element={<VisitEdit />} />
+        <Route path="/visitdelete/:id" element={<DeleteStaff />} />
       </Routes>
     </Router>
   );

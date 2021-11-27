@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-function StaffDetails() {
+function VisitDetails() {
   //initialize the use case to empty
   const [staff, setStaff] = useState([]);
   const { id } = useParams();
@@ -28,13 +28,13 @@ function StaffDetails() {
         <h2>Date of joining:{staff.Date}</h2>
         <button
           type="button"
-          onClick={() => navigate(`/staffedit/${staff.id}`)}
+          onClick={() => navigate(`/visitedit/${staff.id}`)}
         >
-          Edit Staff
+          Edit Visit
         </button>
         <button
           type="button"
-          onClick={() => navigate(`/staffdelete/${staff.id}`)}
+          onClick={() => navigate(`/visitdelete/${staff.id}`)}
         >
           Delete Staff
         </button>
@@ -45,4 +45,4 @@ function StaffDetails() {
   );
 }
 
-export default StaffDetails;
+export default VisitDetails;

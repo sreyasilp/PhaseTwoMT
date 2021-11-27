@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-// import Staff from "./Staff";
 
-function StaffList() {
+function VisitList() {
   const [staffs, setStaffs] = useState([]);
 
   useEffect(() => {
@@ -20,7 +19,7 @@ function StaffList() {
   return (
     <>
       <div>
-        <h1>Staff List</h1>
+        <h1>Visit List</h1>
         <ul>
           {staffs.map((staff) => (
             <li key={staff.user_id}>
@@ -57,4 +56,4 @@ function Staff(props) {
   );
 }
 
-export default StaffList;
+export default VisitList;
