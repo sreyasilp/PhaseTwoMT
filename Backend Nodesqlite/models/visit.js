@@ -11,26 +11,40 @@ const Visit = db.define("visitapp", {
     type: Sequelize.STRING,
     allowNull: false,
   },
-  password: {
+  contact_person: {
     type: Sequelize.STRING,
     allowNull: false,
   },
-  first_name: {
+  contact_no: {
     type: Sequelize.STRING,
     allowNull: false,
   },
-  last_name: {
+  intrested_product: {
     type: Sequelize.STRING,
     allowNull: false,
   },
-  mobile_no: {
+  visit_subject: {
     type: Sequelize.STRING,
     allowNull: false,
   },
-  date: {
+  description: {
+    type: Sequelize.STRING,
+    allowNull: false,
+  },
+  visit_date: {
     type: Sequelize.DATE,
     allowNull: false,
   },
+  is_disabled: {
+    type: Sequelize.STRING,
+    allowNull: false,
+  },
+  is_deleted: {
+    type: Sequelize.STRING,
+    allowNull: false,
+  },
+  
+  
 });
 
 module.exports = Visit;

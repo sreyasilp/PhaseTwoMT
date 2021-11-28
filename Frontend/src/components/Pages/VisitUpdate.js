@@ -1,6 +1,13 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+  crossorigin="anonymous"
+/>;
 
 function StaffEdit() {
   const { id } = useParams();
@@ -32,85 +39,128 @@ function MyForm(props) {
       .put(`http://localhost:4000/visit/${props.id}`, inputs)
       .then((response) => {
         console.log(response);
-        alert("User Details were updated!");
+        alert("Visit Details were updated Successfully!");
+        window.location = "/visitlist";
       });
   }
   return (
-    <div className="mainBody">
+    <div class="container-fluid col-md-11">
+      <h2 class="h3 text-black text-center bg-warning">Add Visit</h2>
       <form onSubmit={handleSubmit}>
-        <div className="row">
-          <label>Customer Name : </label>
+        <div>
+          <label> Customer Name :</label>
           <input
-            type="customer_name"
-            name="text"
-            onChange={handleChange}
+            type="text"
+            class="form-control"
+            name="customer_name"
             value={inputs.customer_name || ""}
+            onChange={handleChange}
+            required
           />
         </div>
 
-        <div className="row">
-          <label>Enter your password: </label>
+        <div>
+          <label>Contact Person :</label>
           <input
-            type="password"
-            name="password"
+            class="form-control"
+            type="text"
+            name="contact_person"
+            value={inputs.contact_person || ""}
             onChange={handleChange}
-            value={inputs.password || ""}
+            required
           />
         </div>
 
-        {/* <div className="row">
-          <label>Confirm password: </label>
+        <div>
+          <label>Contact Number :</label>
           <input
-            type="password"
-            name="confirmpassword"
+            type="tel"
+            class="form-control"
+            name="contact_no"
+            value={inputs.contact_no || ""}
             onChange={handleChange}
-            value={inputs.confirmpassword || ""}
           />
-        </div> */}
+        </div>
 
-        <div className="row">
-          <label>Enter your First Name: </label>
+        <div>
+          <label>Intrested Product :</label>
           <input
             type="text"
-            name="first_name"
+            class="form-control"
+            name="intrested_product"
+            value={inputs.intrested_product || ""}
             onChange={handleChange}
-            value={inputs.first_name || ""}
+            required
           />
         </div>
 
-        <div className="row">
-          <label>Enter your Last Name: </label>
+        <div>
+          <label>Visit Subject :</label>
           <input
             type="text"
-            name="last_name"
+            class="form-control"
+            name="visit_subject"
+            value={inputs.visit_subject || ""}
             onChange={handleChange}
-            value={inputs.last_name || ""}
+            required
           />
         </div>
 
-        <div className="row">
-          <label>Enter your Mobile Number: </label>
+        <div>
+          <label> Description :</label>
           <input
-            type="number"
-            name="mobile_no"
+            class="form-control"
+            type="text"
+            name="description"
+            value={inputs.description || ""}
             onChange={handleChange}
-            value={inputs.mobile_no || ""}
+            required
           />
         </div>
 
-        <div className="row">
-          <label>Date of joining: </label>
+        <div>
+          <label> Visit Date :</label>
           <input
+            class="form-control"
             type="date"
-            name="date"
+            name="visit_date"
+            value={inputs.visit_date || ""}
             onChange={handleChange}
-            value={inputs.date || ""}
+            required
           />
         </div>
 
-        <div className="row">
-          <input type="submit" className="btn" />
-          <input type="reset" value="cancel" className="btnCancel" />
+        <div>
+          <label> Is Disabled :</label>
+          <input
+            class="form-control"
+            type="text"
+            name="is_disabled"
+            value={inputs.is_disabled || ""}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+        <div>
+          <label> Is Deleted :</label>
+          <input
+            class="form-control"
+            type="text"
+            name="is_deleted"
+            value={inputs.is_deleted || ""}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <input type="Submit" class="form-control btn btn-primary mt-3" />
+
+          <input
+            type="reset"
+            class="form-control btn btn-danger mt-3"
+            value="Cancel"
+          />
         </div>
       </form>
     </div>

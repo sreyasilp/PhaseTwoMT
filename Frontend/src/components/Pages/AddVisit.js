@@ -47,76 +47,99 @@ function AddVisit() {
         </div>
 
         <div>
-          <label> Enter your Password :</label>
+          <label>Contact Person :</label>
           <input
             class="form-control"
-            type="password"
-            name="password"
-            value={inputs.password || ""}
-            onChange={handleChange}
-            required
-          />
-        </div>
-
-        {/* <div>
-          <label> Confirm your Password :</label>
-          <input
-            type="password"
-            class="form-control"
-            name="Cpassword"
-            value={inputs.Cpassword || ""}
-            onChange={handleChange}
-            required
-          />
-        </div> */}
-
-        <div>
-          <label> Enter your First Name :</label>
-          <input
             type="text"
-            class="form-control"
-            name="first_name"
-            value={inputs.first_name || ""}
-            onChange={handleChange}
-          />
-        </div>
-
-        <div>
-          <label> Enter your Last Name :</label>
-          <input
-            type="text"
-            class="form-control"
-            name="last_name"
-            value={inputs.last_name || ""}
+            name="contact_person"
+            value={inputs.contact_person || ""}
             onChange={handleChange}
             required
           />
         </div>
 
         <div>
-          <label> Enter your Mobile Number :</label>
+          <label>Contact Number :</label>
           <input
             type="tel"
             class="form-control"
-            name="mobile_no"
-            value={inputs.mobile_no || ""}
+            name="contact_no"
+            value={inputs.contact_no || ""}
+            onChange={handleChange}
+          />
+        </div>
+
+        <div>
+          <label>Intrested Product :</label>
+          <input
+            type="text"
+            class="form-control"
+            name="intrested_product"
+            value={inputs.intrested_product || ""}
             onChange={handleChange}
             required
           />
         </div>
 
         <div>
-          <label> Date of Joining :</label>
+          <label>Visit Subject :</label>
           <input
+            type="text"
             class="form-control"
-            type="date"
-            name="date"
-            value={inputs.date || ""}
+            name="visit_subject"
+            value={inputs.visit_subject || ""}
             onChange={handleChange}
             required
           />
         </div>
 
+        <div>
+          <label> Description :</label>
+          <input
+            class="form-control"
+            type="text"
+            name="description"
+            value={inputs.description || ""}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+        <div>
+          <label> Visit Date :</label>
+          <input
+            class="form-control"
+            type="date"
+            name="visit_date"
+            value={inputs.visit_date || ""}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+        <div>
+          <label> Is Disabled :</label>
+          <input
+            class="form-control"
+            type="text"
+            name="is_disabled"
+            value={inputs.is_disabled || ""}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+        <div>
+          <label> Is Deleted :</label>
+          <input
+            class="form-control"
+            type="text"
+            name="is_deleted"
+            value={inputs.is_deleted || ""}
+            onChange={handleChange}
+            required
+          />
+        </div>
         <div>
           <input type="Submit" class="form-control btn btn-primary mt-3" />
 
