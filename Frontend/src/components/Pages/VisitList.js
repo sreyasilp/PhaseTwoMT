@@ -9,7 +9,7 @@ function StaffList() {
   useEffect(() => {
     console.log("The use effect hook has been executed");
 
-    axios.get("http://localhost:4000/staff").then((response) => {
+    axios.get("http://localhost:4000/visit").then((response) => {
       console.log("promise fulfilled");
       console.log(response);
       //response object contains the complete HTTP REQUEST WITH the

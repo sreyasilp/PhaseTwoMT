@@ -1,13 +1,13 @@
 const Sequelize = require("sequelize");
 const db = require("../config/database");
 
-const Staff = db.define("staffapp", {
+const Staff = db.define("visitapp", {
   id: {
     type: Sequelize.INTEGER,
     primaryKey: true,
     autoIncrement: true,
   },
-  customer_name: {
+  email: {
     type: Sequelize.STRING,
     allowNull: false,
   },

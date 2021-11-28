@@ -14,7 +14,7 @@ function StaffEdit() {
 function MyForm(props) {
   const [inputs, setInputs] = useState({});
   useEffect(() => {
-    axios.get(`http://localhost:4000/staff/${props.id}`).then((response) => {
+    axios.get(`http://localhost:4000/visit/${props.id}`).then((response) => {
       console.log(response);
       setInputs(response.data);
     });
@@ -29,7 +29,7 @@ function MyForm(props) {
     event.preventDefault();
     console.log(inputs);
     axios
-      .put(`http://localhost:4000/staff/${props.id}`, inputs)
+      .put(`http://localhost:4000/visit/${props.id}`, inputs)
       .then((response) => {
         console.log(response);
         alert("User Details were updated!");

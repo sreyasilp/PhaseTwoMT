@@ -17,7 +17,7 @@ function DeleteStaff() {
   useEffect(() => {
     console.log("The use effect hook has been executed");
 
-    axios.delete(`http://localhost:4000/staff/${id}`).then((response) => {
+    axios.delete(`http://localhost:4000/visit/${id}`).then((response) => {
       console.log("Promise fulfilled");
       console.log(response);
       //response object contains the complete HTTP REQUEST with

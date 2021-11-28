@@ -10,7 +10,7 @@ function StaffDetails() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://localhost:4000/staff/${id}`).then((response) => {
+    axios.get(`http://localhost:4000/visit/${id}`).then((response) => {
       console.log("promise was fullfilled");
       console.log(response);
       setStaff(response.data);
@@ -30,16 +30,16 @@ function StaffDetails() {
           type="button"
           onClick={() => navigate(`/visitedit/${staff.id}`)}
         >
-          Edit Staff
+          Edit Visit
         </button>
         <button
           type="button"
           onClick={() => navigate(`/visitdelete/${staff.id}`)}
         >
-          Delete Staff
+          Delete Visit
         </button>
 
-        <a href="/stafflist">Back to Staff List</a>
+        <a href="/stafflist">Back to Visit List</a>
       </div>
     </>
   );

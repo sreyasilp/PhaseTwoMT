@@ -23,7 +23,7 @@ function AddVisit() {
     event.preventDefault();
     //alert the current state
     console.log(inputs);
-    axios.post("http://localhost:4000/staff", inputs).then((response) => {
+    axios.post("http://localhost:4000/visit", inputs).then((response) => {
       console.log("promise was fullfilled");
       console.log(response);
       window.location = "/visitlist";
@@ -32,9 +32,7 @@ function AddVisit() {
 
   return (
     <div class="container-fluid col-md-11">
-      <h2 class="h3 text-black text-center bg-warning">
-        Office Staff Registration Form
-      </h2>
+      <h2 class="h3 text-black text-center bg-warning">Add Visit</h2>
       <form onSubmit={handleSubmit}>
         <div>
           <label> Enter your Email :</label>
