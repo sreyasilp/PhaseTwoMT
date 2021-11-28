@@ -17,6 +17,7 @@ function VisitDetails() {
   const navigate = useNavigate();
 
   useEffect(() => {
+    //get api for getting details 
     axios.get(`http://localhost:4000/visit/${id}`).then((response) => {
       console.log("promise was fullfilled");
       console.log(response);
@@ -65,3 +66,4 @@ function VisitDetails() {
 }
 
 export default VisitDetails;
+//exporing visit funcion

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+//import bootstrap 
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -14,7 +15,7 @@ function StaffList() {
 
   useEffect(() => {
     console.log("The use effect hook has been executed");
-
+    //get api gettin the visit 
     axios.get("http://localhost:4000/visit").then((response) => {
       console.log("promise fulfilled");
       console.log(response);

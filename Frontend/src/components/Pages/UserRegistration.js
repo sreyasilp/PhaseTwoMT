@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
+//importing bootstrap library
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -8,16 +9,17 @@ import "bootstrap/dist/css/bootstrap.min.css";
   crossorigin="anonymous"
 />;
 
+//function registraiton
 function UserRegistration() {
   const [inputs, setInputs] = useState({});
-
+  //function for handlechanges
   function handleChange(event) {
     const name = event.target.name;
     const value = event.target.value;
 
     setInputs((values) => ({ ...values, [name]: value }));
   }
-
+  //function for handle submit
   function handleSubmit(event) {
     //to prevent default html form submit behaviour
     event.preventDefault();

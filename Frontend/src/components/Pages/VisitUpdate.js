@@ -27,11 +27,13 @@ function MyForm(props) {
     });
   }, []);
 
+  //function for handling the changes
   function handleChange(event) {
     const name = event.target.name;
     const value = event.target.value;
     setInputs((values) => ({ ...values, [name]: value }));
   }
+  //handling the user submit
   function handleSubmit(event) {
     event.preventDefault();
     console.log(inputs);

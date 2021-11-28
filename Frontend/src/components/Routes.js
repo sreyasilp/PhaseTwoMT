@@ -40,7 +40,7 @@ function Routers() {
           <Link className="btn btn-primary mb-2 ms-2" to="/contact">
             Contact Us
           </Link>
-
+          {/* checking the localstorage */}
           {localStorage.getItem("mytoken") && (
             <Link className="btn btn-primary mb-2 ms-2" to="/addvisit">
               Add Visits
@@ -66,7 +66,7 @@ function Routers() {
               Logout
             </Link>
           )}
-
+          {/* checking local storage */}
           {localStorage.getItem("mytoken") && (
             <Link className="btn btn-primary mb-2 ms-2" to="/visitlist">
               Visit List
@@ -74,18 +74,18 @@ function Routers() {
           )}
         </div>
         <hr />
-
+        {/* Routes */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="*" element={<Nomatch />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/userregistration" element={<UserRegistration />} />
           <Route path="/addvisit" element={<AddVisit />} />
           <Route path="/visitlist" element={<VisitList />} />
           <Route path="/visitdetails/:id" element={<VisitDetails />} />
           <Route path="/visitedit/:id" element={<VisitEdit />} />
+          <Route path="/userregistration" element={<UserRegistration />} />
           <Route path="/visitdelete/:id" element={<DeleteVisit />} />
         </Routes>
       </Router>

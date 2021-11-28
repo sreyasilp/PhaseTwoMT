@@ -8,7 +8,7 @@ function DeleteVisit() {
 
   useEffect(() => {
     console.log("The use effect hook has been executed");
-
+    //delete api
     axios.delete(`http://localhost:4000/visit/${id}`).then((response) => {
       console.log("Promise fulfilled");
       console.log(response);
