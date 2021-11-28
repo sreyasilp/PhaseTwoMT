@@ -26,31 +26,39 @@ function StaffDetails() {
 
   return (
     <>
-      <div>
-        <h1>Details of {staff.customer_name}</h1>
-        <h2>Customer Name : {staff.customer_name}</h2>
-        <h2>Contact Person : {staff.contact_person}</h2>
-        <h2>Contact Number : {staff.contact_no}</h2>
-        <h2>Intrested Product : {staff.intrested_product}</h2>
-        <h2>Visit Subject :{staff.visit_subject}</h2>
-        <h2>Visit Date :{staff.visit_date}</h2>
-        <h2>Is Disabled :{staff.is_disabled}</h2>
-        <h2>Is Deleted :{staff.is_deleted}</h2>
+      <div className="text-center">
+        <div className="card">
+          <h1>Details of {staff.customer_name}</h1>
+          <p>Customer Name : {staff.customer_name}</p>
+          <p>Contact Person : {staff.contact_person}</p>
+          <p>Contact Number : {staff.contact_no}</p>
+          <p>Intrested Product : {staff.intrested_product}</p>
+          <p>Visit Subject :{staff.visit_subject}</p>
+          <p>Visit Date :{staff.visit_date}</p>
+          <p>Is Disabled :{staff.is_disabled}</p>
+          <p>Is Deleted :{staff.is_deleted}</p>
 
-        <button
-          type="button"
-          onClick={() => navigate(`/visitedit/${staff.id}`)}
-        >
-          Edit Visit
-        </button>
-        <button
-          type="button"
-          onClick={() => navigate(`/visitdelete/${staff.id}`)}
-        >
-          Delete Visit
-        </button>
+          <button
+            className="btn btn-warning"
+            type="button"
+            onClick={() => navigate(`/visitedit/${staff.id}`)}
+          >
+            Edit Visit
+          </button>
+          <button
+            className="btn btn-danger"
+            type="button"
+            onClick={() => navigate(`/visitdelete/${staff.id}`)}
+          >
+            Delete Visit
+          </button>
+          <br />
+          <br />
 
-        <a href="/stafflist">Back to Visit List</a>
+          <a className="link-primary" href="/stafflist">
+            Back to Visit List
+          </a>
+        </div>
       </div>
     </>
   );
