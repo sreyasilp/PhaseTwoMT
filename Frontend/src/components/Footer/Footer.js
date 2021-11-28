@@ -1,3 +1,5 @@
+
+//footer
 function Footer() {
   return (
     <div className="container-fluid ">
@@ -100,3 +102,4 @@ function Footer() {
   );
 }
 export default Footer;
+//exporting footer

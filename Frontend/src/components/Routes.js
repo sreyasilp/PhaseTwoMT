@@ -14,8 +14,8 @@ import DeleteVisit from "./Pages/VisitDelete";
 import VisitEdit from "./Pages/VisitUpdate";
 
 const mystyle = {
-  color: "white",
-  backgroundColor: "#4f3222",
+  color: "black",
+  backgroundColor: "#d6cbd3",
   fontFamily: "Arial",
 };
 
@@ -41,16 +41,17 @@ function Routers() {
             Contact Us
           </Link>
 
-          <Link className="btn btn-primary mb-2 ms-2" to="/addvisit">
-            Add Visits
-          </Link>
-
           {localStorage.getItem("mytoken") && (
-            <Link className="btn btn-primary mb-2 ms-2" to="/userregistration">
-              {" "}
-              Registration{" "}
+            <Link className="btn btn-primary mb-2 ms-2" to="/addvisit">
+              Add Visits
             </Link>
           )}
+
+          <Link className="btn btn-primary mb-2 ms-2" to="/userregistration">
+            {" "}
+            Registration{" "}
+          </Link>
+
           {!localStorage.getItem("mytoken") && (
             <Link className="btn btn-primary mb-2 ms-2" to="/login">
               Login

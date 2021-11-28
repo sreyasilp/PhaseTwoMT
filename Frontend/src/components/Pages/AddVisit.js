@@ -18,11 +18,13 @@ function AddVisit() {
     setInputs((values) => ({ ...values, [name]: value }));
   }
 
+  //function for handling submit
   function handleSubmit(event) {
     //to prevent default html form submit behaviour
     event.preventDefault();
     //alert the current state
     console.log(inputs);
+    //post api connecting the backend
     axios.post("http://localhost:4000/visit", inputs).then((response) => {
       console.log("promise was fullfilled");
       console.log(response);

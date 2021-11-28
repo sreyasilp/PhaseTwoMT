@@ -48,9 +48,7 @@ function Login() {
   return (
     <form onSubmit={handleSubmit}>
       <div class="container-fluid col-md-11">
-        <h2 class="h3 text-black text-center bg-warning">
-          Office Staff Login Form
-        </h2>
+        <h2 class="h3 text-black text-center bg-warning">Login</h2>
         <div>
           <label> Enter your Email :</label>
           <input

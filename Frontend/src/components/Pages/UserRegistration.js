@@ -26,11 +26,12 @@ function UserRegistration() {
     axios.post("http://localhost:3002/register", inputs).then((response) => {
       console.log("promise was fullfilled");
       console.log(response);
-      window.location = "/stafflogin";
+      window.location = "/";
     });
   }
 
   return (
+    //form for registration
     <div class="container-fluid col-md-11">
       <h2 class="h3 text-black text-center bg-warning">
         User Registration Form
@@ -128,17 +129,6 @@ function UserRegistration() {
             required
           />
         </div>
-        {/* <div>
-          <label> Enter User Role:</label>
-          <input
-            type="text"
-            class="form-control"
-            name="role"
-            value={inputs.role || ""}
-            onChange={handleChange}
-            required
-          />
-        </div> */}
 
         <div>
           <label for="role">Choose a Role:</label>

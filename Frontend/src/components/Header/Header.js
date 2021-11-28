@@ -2,7 +2,9 @@ const body1 = {
   backgroundColor: "#98B4D4",
   fontFamily: "Arial",
 };
+//applying styles 
 
+//navigation bar
 function Navbar() {
   return (
     <div className="container-fluid" style={body1}>
@@ -63,3 +65,4 @@ function Navbar() {
 }
 
 export default Navbar;
+//exporting navigation bar

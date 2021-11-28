@@ -10,7 +10,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
   crossorigin="anonymous"
 />;
 
-function StaffDetails() {
+function VisitDetails() {
   //initialize the use case to empty
   const [staff, setStaff] = useState([]);
   const { id } = useParams();
@@ -64,4 +64,4 @@ function StaffDetails() {
   );
 }
 
-export default StaffDetails;
+export default VisitDetails;

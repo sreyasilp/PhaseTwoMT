@@ -1,3 +1,4 @@
+// imporing bootstrap library
 import "bootstrap/dist/css/bootstrap.min.css";
 <link
   rel="stylesheet"
@@ -73,4 +74,5 @@ function About() {
   );
 }
 
+//exporting the about function
 export default About;
