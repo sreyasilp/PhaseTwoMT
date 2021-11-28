@@ -20,8 +20,8 @@ function StaffDetails() {
   return (
     <>
       <div>
-        <h1>Details of {staff.first_name}</h1>
-        <h2>First Name : {staff.first_name}</h2>
+        <h1>Details of {staff.customer_name}</h1>
+        <h2>Customer Name : {staff.customer_name}</h2>
         <h2>Last Name : {staff.last_name}</h2>
         <h2>Email : {staff.email}</h2>
         <h2>Phone No : {staff.mobile_no}</h2>

@@ -7,7 +7,7 @@ const Visit = db.define("visitapp", {
     primaryKey: true,
     autoIncrement: true,
   },
-  email: {
+  customer_name: {
     type: Sequelize.STRING,
     allowNull: false,
   },

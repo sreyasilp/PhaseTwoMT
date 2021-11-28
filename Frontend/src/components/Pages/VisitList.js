@@ -38,7 +38,7 @@ function Staff(props) {
   return (
     <>
       <div>
-        <h4>{props.details.first_name}</h4>
+        <h4>{props.details.customer_name}</h4>
         <button>
           {" "}
           <Link to={`/visitdetails/${props.details.id}`}>view Details</Link>

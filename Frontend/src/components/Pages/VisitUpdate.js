@@ -39,12 +39,12 @@ function MyForm(props) {
     <div className="mainBody">
       <form onSubmit={handleSubmit}>
         <div className="row">
-          <label>Enter your Email: </label>
+          <label>Customer Name : </label>
           <input
-            type="email"
-            name="email"
+            type="customer_name"
+            name="text"
             onChange={handleChange}
-            value={inputs.email || ""}
+            value={inputs.customer_name || ""}
           />
         </div>
 

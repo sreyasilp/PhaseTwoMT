@@ -35,12 +35,12 @@ function AddVisit() {
       <h2 class="h3 text-black text-center bg-warning">Add Visit</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label> Enter your Email :</label>
+          <label> Customer Name :</label>
           <input
-            type="email"
+            type="text"
             class="form-control"
-            name="email"
-            value={inputs.email || ""}
+            name="customer_name"
+            value={inputs.customer_name || ""}
             onChange={handleChange}
             required
           />
