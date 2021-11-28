@@ -1,15 +1,15 @@
-const staffDao = require('../dao/staff.dao');
-var staffController = {
-    addStaff: addStaff,
-    findStaffs: findStaffs,
-    findStaffById: findStaffById,
-    updateStaff: updateStaff,
+const visitDao = require('../dao/visit.dao');
+var visitController = {
+    addVisit: addVisit,
+    findVisits: findVisits,
+    findVisitById: findVisitById,
+    updateVisit: updateVisit,
     deleteById: deleteById
 }
 
-function addStaff(req, res) {
-    let staff = req.body;
-    staffDao.create(staff).
+function addVisit(req, res) {
+    let visit = req.body;
+    visitDao.create(visit).
         then((data) => {
             res.send(data);
         })
@@ -18,8 +18,8 @@ function addStaff(req, res) {
         });
 }
 
-function findStaffById(req, res) {
-    staffDao.findById(req.params.id).
+function findVisitById(req, res) {
+    visitDao.findById(req.params.id).
         then((data) => {
             res.send(data);
         })
@@ -29,11 +29,11 @@ function findStaffById(req, res) {
 }
 
 function deleteById(req, res) {
-    staffDao.deleteById(req.params.id).
+    visitDao.deleteById(req.params.id).
         then((data) => {
             res.status(200).json({
-                message: "Staff deleted successfully",
-                staff: data
+                message: "Visit deleted successfully",
+                visit: data
             })
         })
         .catch((error) => {
@@ -41,12 +41,12 @@ function deleteById(req, res) {
         });
 }
 
-function updateStaff(req, res) {
-    staffDao.updateStaff(req.body, req.params.id).
+function updateVisit(req, res) {
+    visitDao.updateVisit(req.body, req.params.id).
         then((data) => {
             res.status(200).json({
-                message: "Staff updated successfully",
-                staff: data
+                message: "Visit updated successfully",
+                visit: data
             })
         })
         .catch((error) => {
@@ -54,8 +54,8 @@ function updateStaff(req, res) {
         });
 }
 
-function findStaffs(req, res) {
-    staffDao.findAll().
+function findVisits(req, res) {
+    visitDao.findAll().
         then((data) => {
             res.send(data);
         })
@@ -64,4 +64,4 @@ function findStaffs(req, res) {
         });
 }
 
-module.exports = staffController;
+module.exports = visitController;

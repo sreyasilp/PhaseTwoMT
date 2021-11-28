@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const staffRoutes = require('./staff.route');
+const visitRoutes = require('./visit.route');
 
-router.use('/visit', staffRoutes);
+router.use('/visit', visitRoutes);
 module.exports = router;
 
