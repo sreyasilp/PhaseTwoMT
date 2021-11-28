@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
-function VisitEdit() {
+function StaffEdit() {
   const { id } = useParams();
   return (
     <>
@@ -29,7 +29,7 @@ function MyForm(props) {
     event.preventDefault();
     console.log(inputs);
     axios
-      .put(`http://localhost:3001/staff/${props.id}`, inputs)
+      .put(`http://localhost:4000/staff/${props.id}`, inputs)
       .then((response) => {
         console.log(response);
         alert("User Details were updated!");
@@ -117,4 +117,4 @@ function MyForm(props) {
   );
 }
 
-export default VisitEdit;
+export default StaffEdit;

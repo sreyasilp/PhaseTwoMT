@@ -10,8 +10,8 @@ import { useState, useEffect } from "react";
 //     .catch((error) => console.log(error));
 // }
 
-function DeleteVisit() {
-  const [staff, setVisit] = useState([]);
+function DeleteStaff() {
+  const [staff, setStaff] = useState([]);
   const { id } = useParams();
 
   useEffect(() => {
@@ -22,9 +22,9 @@ function DeleteVisit() {
       console.log(response);
       //response object contains the complete HTTP REQUEST with
       //returned data, status code, and headers. We need only 'data'
-      setVisit(response.data);
+      setStaff(response.data);
     });
-    window.location = "/staffList";
+    window.location = "/visitlist";
   }, []);
 
   return (
@@ -41,4 +41,4 @@ function DeleteVisit() {
     </>
   );
 }
-export default DeleteVisit;
+export default DeleteStaff;

@@ -89,7 +89,7 @@ function Routers() {
         <Route path="/addvisit" element={<AddVisit />} />
         {/* <Route path="/regedit" element={<UserEdit />} /> */}
         <Route path="/visitlist" element={<VisitList />} />
-        <Route path="/staffdetails/:id" element={<VisitDetails />} />
+        <Route path="/visitdetails/:id" element={<VisitDetails />} />
         <Route path="/visitedit/:id" element={<VisitEdit />} />
         <Route path="/visitdelete/:id" element={<DeleteStaff />} />
       </Routes>

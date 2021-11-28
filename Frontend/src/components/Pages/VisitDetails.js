@@ -3,17 +3,17 @@ import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-function VisitDetails() {
+function StaffDetails() {
   //initialize the use case to empty
-  const [staff, setVisit] = useState([]);
+  const [staff, setStaff] = useState([]);
   const { id } = useParams();
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://localhost:3001/staff/${id}`).then((response) => {
+    axios.get(`http://localhost:4000/staff/${id}`).then((response) => {
       console.log("promise was fullfilled");
       console.log(response);
-      setVisit(response.data);
+      setStaff(response.data);
     });
   }, []);
 
@@ -30,7 +30,7 @@ function VisitDetails() {
           type="button"
           onClick={() => navigate(`/visitedit/${staff.id}`)}
         >
-          Edit Visit
+          Edit Staff
         </button>
         <button
           type="button"
@@ -39,10 +39,10 @@ function VisitDetails() {
           Delete Staff
         </button>
 
-        <a href="/visitlist">Back to Visit List</a>
+        <a href="/stafflist">Back to Staff List</a>
       </div>
     </>
   );
 }
 
-export default VisitDetails;
+export default StaffDetails;

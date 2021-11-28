@@ -26,28 +26,30 @@ function AddVisit() {
     axios.post("http://localhost:4000/staff", inputs).then((response) => {
       console.log("promise was fullfilled");
       console.log(response);
-      window.location = "/StaffList";
+      window.location = "/visitlist";
     });
   }
 
   return (
     <div class="container-fluid col-md-11">
-      <h2 class="h3 text-black text-center bg-warning">Add Visit</h2>
+      <h2 class="h3 text-black text-center bg-warning">
+        Office Staff Registration Form
+      </h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label> Customer Name :</label>
+          <label> Enter your Email :</label>
           <input
-            type="text"
+            type="email"
             class="form-control"
-            name="customer_name"
-            value={inputs.customer_name || ""}
+            name="email"
+            value={inputs.email || ""}
             onChange={handleChange}
             required
           />
         </div>
 
         <div>
-          <label> Contact Person :</label>
+          <label> Enter your Password :</label>
           <input
             class="form-control"
             type="password"

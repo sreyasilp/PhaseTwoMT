@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+// import Staff from "./Staff";
 
-function VisitList() {
+function StaffList() {
   const [staffs, setStaffs] = useState([]);
 
   useEffect(() => {
@@ -40,7 +41,7 @@ function Staff(props) {
         <h4>{props.details.first_name}</h4>
         <button>
           {" "}
-          <Link to={`/visitlist/${props.details.id}`}>view Details</Link>
+          <Link to={`/visitdetails/${props.details.id}`}>view Details</Link>
         </button>
         <br />
         <br />
@@ -56,4 +57,4 @@ function Staff(props) {
   );
 }
 
-export default VisitList;
+export default StaffList;
