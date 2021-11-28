@@ -25,8 +25,8 @@ function StaffList() {
   }, []);
   return (
     <>
-      <div>
-        <h1>Visit List</h1>
+      <div className="text-center">
+        <h3>Visit List</h3>
         <ul>
           {staffs.map((staff) => (
             <li key={staff.user_id}>
@@ -43,21 +43,15 @@ function Staff(props) {
   console.log(props);
   return (
     <>
-      <div>
-        <h4>{props.details.customer_name}</h4>
-        <button>
-          {" "}
-          <Link to={`/visitdetails/${props.details.id}`}>view Details</Link>
-        </button>
+      <div className="text-center">
+        <h5>{props.details.customer_name}</h5>{" "}
+        <Link
+          className="btn btn-primary"
+          to={`/visitdetails/${props.details.id}`}
+        >
+          View Details
+        </Link>
         <br />
-        <br />
-        {/* <Link to={`/deletestaff/${props.details.id}`}>Delete staff</Link> */}
-        {/* {<h4>{props.details.last_name}</h4>}
-          <p>{props.details.email}</p>
-          <p>{props.details.mobile_no}</p> */}
-        {/* <button style={Edit}type="submit">Edit</button>
-          <button style={Delete} type="submit">Delete</button> */}
-        {/* <p>{props.details.data_of_joining}</p> */}
       </div>
     </>
   );

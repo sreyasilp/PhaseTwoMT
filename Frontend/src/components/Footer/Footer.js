@@ -1,10 +1,9 @@
 function Footer() {
   return (
     <div className="container-fluid ">
-      <footer className="text-center text-lg-start bg-light text-muted">
-        <section className="d-flex justify-content-center justify-content-lg-between p-1 border-bottom">
-          <div className="me-5 d-none d-lg-block"></div>
-
+      <footer className="text-center text-lg-start bg-dark  text-white">
+        <section className="d-flex justify-content-center justify-content-lg-between  border-bottom">
+          <div className=" d-none d-lg-block"></div>
           <div></div>
         </section>
 

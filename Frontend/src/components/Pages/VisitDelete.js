@@ -2,7 +2,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-function DeleteStaff() {
+function DeleteVisit() {
   const [staff, setStaff] = useState([]);
   const { id } = useParams();
 
@@ -27,4 +27,4 @@ function DeleteStaff() {
     </>
   );
 }
-export default DeleteStaff;
+export default DeleteVisit;
