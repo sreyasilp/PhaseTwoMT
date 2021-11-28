@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
@@ -12,7 +11,9 @@ import VisitList from "./Pages/VisitList";
 import VisitDetails from "./Pages/VisitDetails";
 import DeleteVisit from "./Pages/VisitDelete";
 import VisitEdit from "./Pages/VisitUpdate";
+//importing all the components
 
+//applying styles
 const mystyle = {
   color: "black",
   backgroundColor: "#d6cbd3",
